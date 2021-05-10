@@ -9,4 +9,7 @@ public class SearchResult {
     public static Question<Collection<String>> titles() {
         return actor -> TextContent.of(SearchResultList.RESULT_TITLES).viewedBy(actor).asList();
     }
+    public static Question<Collection<String>> titleslocation() {
+        return actor -> TextContent.of(SearchResultList.RESULT_TITLES_LOCATION).viewedBy(actor).asList();
+    }
 }

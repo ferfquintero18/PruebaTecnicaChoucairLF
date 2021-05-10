@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Search by Location" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T03:20:30" hostname="DESKTOP-QN18EAU" time="21.178">
+  <properties/>
+  <testcase name="Searching for a location" classname="Search by Location" time="21.178"/>
+  <system-out><![CDATA[Feature: Search by Location
+
+  Scenario: Searching for a location                                  ?[90m# src/test/resources/features/search/SearchLocation.feature:3?[0m
+22:20:30.527 [Test worker] INFO   - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Searching for a location(search-by-location;searching-for-a-location)
+-------------------------------------------------------------------
+22:20:31.886 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+22:20:31.886 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1mFernanda?[0m?[32m is on the ChoucairTesting Empleos Page?[0m             ?[90m# SearchOnChoucairTestingStepDefinitions.on_the_ChoucairTesting_Empleos_Page(String)?[0m
+    ?[32mWhen ?[0m?[32mshe searches for location ?[0m?[32m?[1m"Per"?[0m                              ?[90m# SearchOnChoucairTestingStepDefinitions.search_for_location(String)?[0m
+    ?[32mThen ?[0m?[32mall the result titles location should contain the word ?[0m?[32m?[1m"Per"?[0m ?[90m# SearchOnChoucairTestingStepDefinitions.all_the_result_titles_location_should_contain_the_word(String)?[0m
+]]></system-out>
+  <system-err><![CDATA[May 09, 2021 10:20:31 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 39710
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 09, 2021 10:20:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

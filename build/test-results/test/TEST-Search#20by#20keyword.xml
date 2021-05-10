@@ -1,41 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Search by keyword" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-03T14:04:15" hostname="Andromeda.local" time="11.582">
+<testsuite name="Search by keyword" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-10T03:21:05" hostname="DESKTOP-QN18EAU" time="8.073">
   <properties/>
-  <testcase name="Searching for a term" classname="Search by keyword" time="11.582"/>
-  <system-out><![CDATA[19:34:16.023 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+  <testcase name="Searching for a term" classname="Search by keyword" time="8.073">
+    <failure message="java.lang.AssertionError: &#10;Expecting a collection that matches: each element is a title containing 'Pruebas'&#10;But got: [&#10;&#9;&#9;&#9;Analista de Pruebas Medellín y Bogotá&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;Choucair Testing &#9;&#9;&#9;&#9;Somos una compañía extraordinaria&#9;&#9;&#9;&#10;&#9;&#9;, &#10;&#9;&#9;&#9;Analista de Migración&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Somos una compañía Extraordinaria&#9;&#9;&#9;&#10;&#9;&#9;, &#10;&#9;&#9;&#9;Analista de Pruebas Móviles&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;Choucair Testing &#9;&#9;&#9;&#9;Somos una compañía Extraordinaria&#9;&#9;&#9;&#10;&#9;&#9;, &#10;&#9;&#9;&#9;Analista de Pruebas sector Bancario&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;, &#10;&#9;&#9;&#9;Automatizador Medellín y Bogotá&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;, &#10;&#9;&#9;&#9;Automatizador&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Somos una compañía extraordinaria&#9;&#9;&#9;&#10;&#9;&#9;, &#10;&#9;&#9;&#9;Analista de Pruebas Performance&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;Choucair Testing &#9;&#9;&#9;&#9;Somos una compañía extraordinaria&#9;&#9;&#9;&#10;&#9;&#9;]" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expecting a collection that matches: each element is a title containing 'Pruebas'
+But got: [
+			Analista de Pruebas Medellín y Bogotá
+			
+				Choucair Testing 				Somos una compañía extraordinaria			
+		, 
+			Analista de Migración
+			
+								Somos una compañía Extraordinaria			
+		, 
+			Analista de Pruebas Móviles
+			
+				Choucair Testing 				Somos una compañía Extraordinaria			
+		, 
+			Analista de Pruebas sector Bancario
+			
+											
+		, 
+			Automatizador Medellín y Bogotá
+			
+											
+		, 
+			Automatizador
+			
+								Somos una compañía extraordinaria			
+		, 
+			Analista de Pruebas Performance
+			
+				Choucair Testing 				Somos una compañía extraordinaria			
+		]
+	at net.serenitybdd.screenplay.ensure.PerformablePredicate.performAs(PerformableExpectations.kt:85)
+	at net.serenitybdd.screenplay.ensure.PerformablePredicate$ByteBuddy$ELDgl4GJ.performAs$accessor$BJ6v51eb(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
+	at net.serenitybdd.screenplay.ensure.PerformablePredicate$ByteBuddy$ELDgl4GJ.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
+	at net.serenitybdd.screenplay.actors.OnStage.withCurrentActor(OnStage.java:64)
+	at starter.stepdefinitions.SearchOnChoucairTestingStepDefinitions.all_the_result_titles_should_contain_the_word(SearchOnChoucairTestingStepDefinitions.java:45)
+	at ✽.all the result titles should contain the word &quot;Pruebas&quot;(file:src/test/resources/features/search/search_by_keyword.feature:6)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+Feature: Search by keyword
+
+  Scenario: Searching for a term                                 ?[90m# src/test/resources/features/search/search_by_keyword.feature:3?[0m
+22:21:05.198 [Test worker] INFO   - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
   | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
   |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
-                                                                  
 
-TEST STARTED: Searching for a term
--------------------------------------------------------------------(search-by-keyword;searching-for-a-term)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Searching for a term(search-by-keyword;searching-for-a-term)
+-------------------------------------------------------------------
+22:21:05.471 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+22:21:05.471 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1mFernanda?[0m?[32m is on the ChoucairTesting Empleos Page?[0m        ?[90m# SearchOnChoucairTestingStepDefinitions.on_the_ChoucairTesting_Empleos_Page(String)?[0m
+    ?[32mWhen ?[0m?[32mshe searches for ?[0m?[32m?[1m"Pruebas"?[0m                              ?[90m# SearchOnChoucairTestingStepDefinitions.search_for(String)?[0m
+    ?[31mThen ?[0m?[31mall the result titles should contain the word ?[0m?[31m?[1m"Pruebas"?[0m ?[90m# SearchOnChoucairTestingStepDefinitions.all_the_result_titles_should_contain_the_word(String)?[0m
+      ?[31mjava.lang.AssertionError: 
+Expecting a collection that matches: each element is a title containing 'Pruebas'
+But got: [
+			Analista de Pruebas Medellín y Bogotá
+			
+				Choucair Testing 				Somos una compañía extraordinaria			
+		, 
+			Analista de Migración
+			
+								Somos una compañía Extraordinaria			
+		, 
+			Analista de Pruebas Móviles
+			
+				Choucair Testing 				Somos una compañía Extraordinaria			
+		, 
+			Analista de Pruebas sector Bancario
+			
+											
+		, 
+			Automatizador Medellín y Bogotá
+			
+											
+		, 
+			Automatizador
+			
+								Somos una compañía extraordinaria			
+		, 
+			Analista de Pruebas Performance
+			
+				Choucair Testing 				Somos una compañía extraordinaria			
+		]
+	at net.serenitybdd.screenplay.ensure.PerformablePredicate.performAs(PerformableExpectations.kt:85)
+	at net.serenitybdd.screenplay.ensure.PerformablePredicate$ByteBuddy$ELDgl4GJ.performAs$accessor$BJ6v51eb(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
+	at net.serenitybdd.screenplay.ensure.PerformablePredicate$ByteBuddy$ELDgl4GJ.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
+	at net.serenitybdd.screenplay.actors.OnStage.withCurrentActor(OnStage.java:64)
+	at starter.stepdefinitions.SearchOnChoucairTestingStepDefinitions.all_the_result_titles_should_contain_the_word(SearchOnChoucairTestingStepDefinitions.java:45)
+	at ?.all the result titles should contain the word "Pruebas"(file:src/test/resources/features/search/search_by_keyword.feature:6)
+?[0m
 ]]></system-out>
-  <system-err><![CDATA[Feb 03, 2019 7:34:16 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+  <system-err><![CDATA[May 09, 2021 10:21:05 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 2.46.628411 (3324f4c8be9ff2f70a05a30ebc72ffb013e1a71e) on port 2888
+Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 45546
 Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Feb 03, 2019 7:34:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 09, 2021 10:21:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
